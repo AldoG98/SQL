@@ -1,0 +1,27 @@
+CREATE TABLE party_food (id integer PRIMARY KEY, name TEXT, cost INTEGER );
+INSERT INTO food VALUES (1,"Tacos",1);
+INSERT INTO food VALUES (2,"Quesdailla",2);
+INSERT INTO food VALUES (3,"Fresh Water",3);
+INSERT INTO FOOD VALUES (4,"Churros",4);
+INSERT INTO FOOD VALUES (5,"Salsa",5);
+
+CREATE TABLE party_supplies (id INTEGER PRIMARY KEY, name TEXT, cost INTEGER );
+INSERT INTO party_supplies VALUES (1,"Pinata",1);
+INSERT INTO party_supplies VALUES (2,"Party Hats",2);
+INSERT INTO party_supplies VALUES (3,"Jumpers",3);
+INSERT INTO party_supplies VALUES (4,"Chairs",4);
+INSERT INTO party_supplies VALUES (5,"Tables",5);
+
+CREATE TABLE party_clothes (id INTEGER PRIMARY KEY, name TEXT, cost INTEGER );
+INSERT INTO CLOTHES VALUES (1,"Shirt",1);
+INSERT INTO CLOTHES VALUES (2,"Pants",2);
+INSERT INTO CLOTHES VALUES (3,"Shoes",3);
+INSERT INTO CLOTHES VALUES (4,"Socks",4);
+INSERT INTO CLOTHES VALUES (5,"Sweaters",5);
+
+--what is the sum cost from party_clothes?
+SELECT SUM(COST) FROM party_clothes ;
+
+--display the database order by price.
+SELECT * from party_food
+ORDER BY price desc 
