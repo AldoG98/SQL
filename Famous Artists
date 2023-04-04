@@ -1,0 +1,67 @@
+CREATE TABLE artists (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    stage_name TEXT,
+    real_name TEXT
+); 
+
+INSERT INTO artists (stage_name, real_name) VALUES ("Audien", "Nate Rathburn");
+INSERT INTO artists (stage_name, real_name) VALUES ("porter robinson", "Porter Robinson");
+INSERT INTO artists (stage_name, real_name) VALUES ("Zedd", "Anton Zaslavski");
+INSERT INTO artists (stage_name, real_name) VALUES ("Skrillex", "Sonny John Moore");
+INSERT INTO artists (stage_name, real_name) VALUES ("Madeon", "Hugo Leclercq");
+INSERT INTO artists (stage_name, real_name) VALUES ("Deadmau5", "Joel Thomas Zimmerman");
+INSERT INTO artists (stage_name, real_name) VALUES ("Kaskade","Ryan Gary Raddon");
+INSERT INTO artists (stage_name, real_name) VALUES ("Tiesto", "Tijs Michiel Verwest");
+INSERT INTO artists (stage_name, real_name) VALUES ("Marshmello", "Christopher Comstock");
+INSERT INTO artists (stage_name, real_name) VALUES ("Calvin Harris", "Adam Richard Wiles");
+INSERT INTO artists (stage_name, real_name) VALUES ("Alesso", "Alessandro Renato Rodolfo Lindblad");
+INSERT INTO artists (stage_name, real_name) VALUES ("Avicii", "Tim Bergling");
+INSERT INTO artists (stage_name, real_name) VALUES ("Arty", "Artyom Stolyarov");
+CREATE TABLE songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    artist_id INTEGER,
+    title TEXT,
+    release_year INTEGER
+); 
+INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (1, "Something Better",2015);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (1, "Circles",2013);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (2, "Sad Machine",2014);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (2, "Shelter",2016);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (3, "Spectrum",2012);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (3, "Clarity",2012);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (4, "Bangarang",2011);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (4, "Kyoto",2010);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (5, "Pop culture",2011);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (5, "Adventure",2015);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (6, "The Veldt",2012);
+   INSERT INTO songs 
+(artist_id, title, release_year) 
+   VALUES (6, "Strobe", 2009);
+   SELECT * FROM artists;
+
+SELECT stage_name, title
+   FROM artists, songs
+   WHERE artists.id = songs.artist_id
+   order by Release_year desc;
